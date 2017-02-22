@@ -1,36 +1,38 @@
-## 郑敬发的博客开张啦,欢迎光临
-You can use the [editor on GitHub](https://github.com/afanail/afanail.github/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+#Afanail web之路
+##1.数组常见的方法
+    ###//1.创建数组
+    var myArray1 = [1,2,3,354,5,20];
+    var myArray2 = [2,3,5,123,6,21];
+     ###//2数组的连接方法:concat
+     var myArray3 = myArray1.concat(myArray2);
+      console.log(myArray3);
+     ###//3.给数组的尾部添加一个元素
+     var length1 = myArray1.push('20');
+    console.log(myArray1);
+    console.log(length1)
+    ###//4.给数组同步添加一个元素
+    var length2 =  myArray2.unshift(20);
+    console.log(myArray2);
+    console.log(length2);
+    //凡是数组中添加元素都是返回数组的长度
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/afanail/afanail.github/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+    ###//5.删除尾部的元素
+    var delSym1 = myArray1.pop();
+    console.log(myArray1);
+    console.log(delSym1);
+    ###//6.删除头部元素
+    var delSym2 = myArray2.shift();
+    console.log(myArray2);
+    console.log(delSym2);
+    //凡是删除元素都是返回删除的元素
+    ###//7.删除某一个位置的元素
+    myArray1.splice(2,4);
+    console.log(myArray1);
+    ###//一般这个方法有两个参数，第一个表示从某一个位置开始删除，第二个表示删除元素的个数
+    //8.可以使用传入的参数来连接每一个数组中的元素，形成一个字符串
+    var lastString = myArray2.join('-');
+    console.log(typeof lastString);
+    console.log(lastString);
+    ###//9.将有规律的字符转化成数组,使用参数中传入的值进行分割
+    var lastArray = lastString.split('-');
+    console.log(lastArray);
